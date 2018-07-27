@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Blog page{% endblock %}
+{% block body %}
+{% for b in blogs %}
+<div class="title">{{b.title}}</div>
+<div class="author">{{b.author}}</div>
+<div class="blog">{{b.text}}</div>
+<div class="date">{{b.published_date}}</div>
+{% endfor %}
+{% endblock %}

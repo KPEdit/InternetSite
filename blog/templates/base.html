@@ -1,8 +1,13 @@
-<!DOCTYPE html>
+<!DOCTYPE html>{% load bootstrap3 %}
 <html lang="ru">
 <head>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% block head %}
+    {% endblock %}
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+
 </head>
 <body>
 {% block body %}

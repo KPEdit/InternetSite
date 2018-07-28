@@ -1,10 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import User, Blog
+from .forms import BlogForm
 from django.utils import timezone
 # Create your views here.
 
+def add(request):
+    if request.method == 'POST':
+        formset = BlogForm(request.POST)
+        if formset.is_valid():
+            formset.save()
+            return redirect('/blog/')
+    else:
+        formset = BlogForm()
+    return render(request, 'blog/add.html', {'formset':formset})
+
+
 def index(request):
     blogs = Blog.objects.filter(published_date__lte=timezone.now())\
-        .order_by('published_date')
+        .order_by('-published_date')
 
     return render(request, 'blog/index.html', {'blogs':blogs})

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}{% load bootstrap3 %}{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/some.css' %}">
+{% endblock %}
+{% block title %}Adding new blog{% endblock %}
+{% block body %}
+
+    <form action="" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form formset %}
+    {# formset.as_p #}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">
+            {% bootstrap_icon "star" %} Submit
+        </button>
+    {% endbuttons %}
+</form>
+
+{% endblock %}

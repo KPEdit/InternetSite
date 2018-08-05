@@ -50,9 +50,9 @@ ul, ol, li {
 }
 
 .footer {
-  /* position: absolute;
-  bottom: 0; */
-  margin-top: 80%;
+  box-sizing: content-box;
+  display: table;
+  padding: 20px 35px;
   width: 100%;
   min-height: 80px;
   background-color: #4694d4;
@@ -106,9 +106,12 @@ ul, ol, li {
 
 .content-wrap{
   padding: 40px;
+  min-height: 900px;
+  max-height: 2700px;
 }
 
 .content {
+  background-color: rgba(255,255,255, 0.6);
   padding: 5px;
   border: 2px dashed lightgrey;
   border-radius: 3px;
@@ -124,15 +127,19 @@ ul, ol, li {
 }
 
 .content .author {
-  padding: 10px;
+  padding: 14px;
   font-style: oblique;
 }
 
 .content .blog {
+  padding: 0 20px 0 8px;
+  text-align: justify;
   font-family: monospace;
 }
 
 .content .date {
+  padding-right: 4px;
+  padding-bottom: 8px;
   text-align: right;
   font-size: 12px;
   font-style: italic;
@@ -143,6 +150,35 @@ ul, ol, li {
 }
 
 
+.footer-row {
+  display: table-row;
+  padding: 2px;
+}
+
+.footer-cell  {
+  display: table-cell;
+  opacity: 0.9;
+}
+
+.footer-cell:nth-child(2){
+  width: 30%;
+  color: rgba(255,255,255, 0.8);
+}
+
+.footer-cell .footer_link {
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255, 0.8);
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.footer-cell .footer_link:hover {
+  opacity: 0.8;
+}
+
+.footer-cell .footer_link:visited{
+  color: rgba(255,255,255, 0.8);
+}
 
 
 

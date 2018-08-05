@@ -50,7 +50,7 @@ ul, ol, li {
 }
 
 .footer {
-  box-sizing: content-box;
+  box-sizing: border-box;
   display: table;
   padding: 20px 35px;
   width: 100%;

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}{% load bootstrap3 %}
+{% block title %}Blog page{% endblock %}
+{% block body %}
+{% for b in blogs %}
+<div class="content">
+<div class="title">{{b.title}}</div>
+<div class="author">{{b.author}}</div>
+<div class="blog">{{b.text}}</div>
+<div class="date">{{b.published_date}}</div>
+</div>
+{% endfor %}
+{% bootstrap_button button_type='submit' size='lg' href='/admin/' content='Send' %}
+{% endblock %}

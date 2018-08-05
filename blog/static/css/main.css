@@ -1,0 +1,154 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0,0,0,0.07);
+}
+
+a, p, button, div, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  padding: 0;
+  margin: 0;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.clearfix{
+  clear:both;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #2664a4;
+}
+
+.header-image {
+  background-image: url("../image/header_image__1.png")
+  /* background-repeat: repeat-x; */
+}
+
+.header__text{
+  vertical-align: middle;
+  text-align: center;
+
+}
+
+.header__text p {
+  font-size: 30px;
+  color: #3cf04a;
+}
+
+.footer {
+  /* position: absolute;
+  bottom: 0; */
+  margin-top: 80%;
+  width: 100%;
+  min-height: 80px;
+  background-color: #4694d4;
+}
+
+.menu {
+  background-color: #4694d4;
+  margin-top: 100px;
+  padding: 10px;
+}
+
+.links {
+  width:20%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.links li{
+  float:left;
+  list-style: none;
+  margin-right: 10px;
+  /* margin-top: 10px; */
+}
+
+.links li:last-child{
+  margin-right: 0;
+}
+
+.menu_link  {
+  padding: 5px;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #aa1122;
+  background-color: rgba(89,122,254, 0.3);
+}
+
+.menu_link:visited,  .menu_link:active {
+  color: #a12;
+  text-decoration: none;
+
+}
+.menu_link:hover {
+  color: #d23;
+  text-decoration: none;
+  background-color: rgba(89,122,254, 0.9);
+}
+
+.content-wrap{
+  padding: 40px;
+}
+
+.content {
+  padding: 5px;
+  border: 2px dashed lightgrey;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.content .title {
+  display: inline;
+  border-bottom: 2px dotted lightblue;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.content .author {
+  padding: 10px;
+  font-style: oblique;
+}
+
+.content .blog {
+  font-family: monospace;
+}
+
+.content .date {
+  text-align: right;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.content:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */

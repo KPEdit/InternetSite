@@ -2,7 +2,13 @@ from django.shortcuts import render, redirect
 from .models import User, Blog
 from .forms import BlogForm
 from django.utils import timezone
+
+
 # Create your views here.
+
+def index(request):
+    return render(request, 'blog/index.html')
+
 
 def add(request):
     if request.method == 'POST':
@@ -12,11 +18,11 @@ def add(request):
             return redirect('/blog/')
     else:
         formset = BlogForm()
-    return render(request, 'blog/add.html', {'formset':formset})
+    return render(request, 'blog/add.html', {'formset': formset})
 
 
-def index(request):
-    blogs = Blog.objects.filter(published_date__lte=timezone.now())\
+def blog(request):
+    blogs = Blog.objects.filter(published_date__lte=timezone.now()) \
         .order_by('-published_date')
 
-    return render(request, 'blog/index.html', {'blogs':blogs})
+    return render(request, 'blog/blog.html', {'blogs': blogs})
